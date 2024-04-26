@@ -1,18 +1,20 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
-import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero.png";
+import EmailInput from "./ui/forms/EmailInput.astro";
+
+const sectionTitle: string = "Get invited to our launch";
+const sectionContent: string = "We will only send you one email per week with the most recent updates";
 ---
 
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
-    <Picture
+    <Image
       src={heroImage}
       alt="Two people sat on stools, talking in front of a desk with a laptop computer"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 400px) 100vw, 420px"
+      width=400
+      height=400
       loading="eager"
       format="avif"
     />
@@ -22,31 +24,23 @@ import { Icon } from "astro-icon";
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Streamlined web services to boost your business - minus the hassle.
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+    <p class="text-lg mt-4 text-slate-900 max-w-xl">
       We are a web agency based in Kent, focused on small and medium businesses.
       <wbr /> If you need a simple and effective website, or a custom solution built from scratch, we are here to help.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
 
-         Reach out to us now
-      </Link>
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-         GitHub Repo
-      </Link>
+    <div class="col-span-2">
+      <h3 class="font-bold text-emerald-950 dark:text-emerald-900 mt-5">
+        {sectionTitle}
+      </h3>
+
+      <form>
+        <EmailInput />
+        <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
+          {sectionContent}
+        </p>
+      </form>
     </div>
+  </div>
   </div>
 </main>

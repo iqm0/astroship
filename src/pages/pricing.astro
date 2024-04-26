@@ -6,8 +6,10 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Personal Site",
+    price: { monthly: "£100",
+      original: "£200",
+    discount: "50%"},
     popular: false,
     features: [
       "Lifetime free",
@@ -18,18 +20,15 @@ const pricing = [
       "Community Support",
     ],
     button: {
-      text: "Get Started",
-      link: "/",
+      text: "Contact us",
+      link: "/contact",
     },
   },
   {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
+    name: "Business",
+    price: { monthly: "£300",
+      original: "£600",
+    discount: "50%"},
     popular: true,
     features: [
       "All Free Features",
@@ -40,13 +39,13 @@ const pricing = [
       "Priority Support",
     ],
     button: {
-      text: "Get Started",
-      link: "#",
+      text: "Contact us",
+      link: "/contact",
     },
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    price: "from £500",
     popular: false,
     features: [
       "All Pro Features",
@@ -69,7 +68,7 @@ const pricing = [
     <Sectionhead>
       <Fragment slot="title">Pricing</Fragment>
       <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
+        Introductory prices for a limited time only.
       </Fragment>
     </Sectionhead>
 

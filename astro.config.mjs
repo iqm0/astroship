@@ -7,4 +7,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://astroship.web3templates.com",
   integrations: [tailwind(), mdx(), sitemap()],
+  devToolbar: {
+    enabled: true
+  }
+
 });
