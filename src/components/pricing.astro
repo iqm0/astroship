@@ -1,5 +1,4 @@
 ---
-import { Tick } from "@components/ui/icons";
 import Link from "@components/ui/link.astro";
 
 const { plan } = Astro.props;
@@ -8,8 +7,8 @@ const { plan } = Astro.props;
 <div>
   <div
     class="flex flex-col w-full order-first lg:order-none border-2 border-[#D8DEE9] border-opacity-50 py-5 px-6 rounded-md">
-    <h4 class="text-lg font-medium text-gray-400">{plan.name}</h4>
-    <p class="mt-2 text-gray-400">
+    <h3 class="text-lg font-bold text-gray-700 dark:text-gray-800">{plan.name}</h3>
+    <p class="mt-2 text-gray-600 dark:text-gray-600">
       Ideal for {plan.description}
     </p>
     <div class="mt-8 grid gap-y-4">
@@ -17,11 +16,11 @@ const { plan } = Astro.props;
         <p class="text-gray-800"><b>Initial Setup:</b> {plan.cost.initial}</p>
         <p class="mt-1 text-gray-800"><b>Monthly:</b> {plan.cost.monthly}</p>
       </div>
-      <ul class="text-left gap-y-4">
+      <ul class="list-inside list-disc text-left gap-y-4">
         {
           plan.features.map((item) => (
             <li class="flex items-start gap-3 text-gray-800">
-              <Tick class="w-6 h-6" />
+              <span class="text-indigo-600">•</span>
               <span>{item}</span>
             </li>
           ))

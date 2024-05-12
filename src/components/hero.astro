@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import heroImage from "../assets/hero.png";
 import EmailInput from "./ui/forms/EmailInput.astro";
 
-const sectionTitle: string = "Get invited to our launch";
+const sectionTitle: string = "Get in touch to learn more";
 const sectionContent: string = "We will only send you one email per week with the most recent updates";
 ---
 
@@ -21,7 +21,9 @@ const sectionContent: string = "We will only send you one email per week with th
   </div>
   <div>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter bg-gradient-to-r from-pink-500 to-orange-500 to-blue-500 dark:from-pink-400 dark:to-orange-400 dark:to-blue-400 bg-clip-text text-transparent"
+      style="mix-blend-mode: difference; text-shadow: 0 0 2px rgba(0, 0, 0, 0);"
+    >
       Streamlined web services to boost your business - minus the hassle.
     </h1>
     <p class="text-lg mt-4 text-slate-900 max-w-xl">
@@ -30,16 +32,35 @@ const sectionContent: string = "We will only send you one email per week with th
     </p>
 
     <div class="col-span-2">
-      <h3 class="font-bold text-emerald-950 dark:text-emerald-900 mt-5">
+      <h3 class="font-bold text-orange-900 mt-5">
         {sectionTitle}
       </h3>
+      <a
+        href="#contact"
+        class="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-900 text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5 shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 animate-pulse"
+      >
+        Contact us
+        <svg
+          class="w-6 h-6 ml-2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
 
+<!-- 
       <form>
         <EmailInput />
         <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
           {sectionContent}
         </p>
-      </form>
+      </form> -->
     </div>
   </div>
   </div>

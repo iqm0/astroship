@@ -7,12 +7,11 @@ import PricingCard from "@components/pricing.astro";
 const pricing = [
   {
     name: "Business Lite",
-    description: "For small businesses",
-    cost: { initial: "£100",
-      monthly: "£10",},
+    description: "sole traders and small businesses",
+    cost: { initial: "£200",
+      monthly: "£20",},
     popular: false,
     features: [
-      "Ideal for sole traders and small businesses",
       "Website design and development",
       "Content management",
       "Responsive design",
@@ -25,44 +24,45 @@ const pricing = [
       link: "/contact",
     },
   },
-  // {
-  //   name: "Business Pro",
-  //   price: { monthly: "£300",
-  //     original: "£600",
-  //   discount: "50%"},
-  //   popular: true,
-  //   features: [
-  //     "Ideal for growing businesses that need more complex functionalities like e-commerce and booking systems",
-  //     "Advanced Website design",
-  //     "E-commerce and online payments",
-  //     "Booking systems",
-  //     "Analytics integration",
-  //     "Email marketing integration",
-  //     "Priority support with guaranteed response within 24 hours"
-  //   ],
-  //   button: {
-  //     text: "Contact us",
-  //     link: "/contact",
-  //   },
-  // },
-  // {
-  //   name: "Enterprise",
-  //   price: "from £500",
-  //   popular: false,
-  //   features: [
-  //     "Ideal for large businesses or those needing extensive web applications and a full digital toolkit",
-  //     "Custom Web Applications",
-  //     "Full Website and COntent Management",
-  //     "Full SEO and Digital Marketing Strategy",
-  //     "Digital Workspace Setup",
-  //     "Ongoing Maintenance and Support",
-  //     "Training and Workshops"
-  //   ],
-  //   button: {
-  //     text: "Contact us",
-  //     link: "/contact",
-  //   },
-  // },
+  {
+    name: "Business Pro",
+    description: "medium-to-large businesses",
+    cost: { initial: "£600",
+      monthly: "£30",},
+    popular: true,
+    features: [
+      "Ideal for growing businesses that need more complex functionalities like e-commerce and booking systems",
+      "Advanced Website design",
+      "E-commerce and online payments",
+      "Booking systems",
+      "Analytics integration",
+      "Email marketing integration",
+      "Priority support with guaranteed response within 24 hours"
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Enterprise",
+    description: "corporate clients",
+    cost: { initial: "from £1000",
+      monthly: "Customised",},
+    popular: false,
+    features: [
+      "Custom Web Applications",
+      "Full Website and COntent Management",
+      "Full SEO and Digital Marketing Strategy",
+      "Digital Workspace Setup",
+      "Ongoing Maintenance and Support",
+      "Training and Workshops"
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
 ];
 ---
 
