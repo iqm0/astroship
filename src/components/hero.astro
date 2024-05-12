@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero.png";
 import EmailInput from "./ui/forms/EmailInput.astro";
+import Link from "./ui/link.astro";
 
 const sectionTitle: string = "Get in touch to learn more";
 const sectionContent: string = "We will only send you one email per week with the most recent updates";
@@ -35,8 +36,8 @@ const sectionContent: string = "We will only send you one email per week with th
       <h3 class="font-bold text-orange-900 mt-5">
         {sectionTitle}
       </h3>
-      <a
-        href="#contact"
+      <Link
+        href="/contact"
         class="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-900 text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5 shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 animate-pulse"
       >
         Contact us
@@ -52,7 +53,7 @@ const sectionContent: string = "We will only send you one email per week with th
             clip-rule="evenodd"
           />
         </svg>
-      </a>
+      </Link>
 
 <!-- 
       <form>

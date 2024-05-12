@@ -31,11 +31,11 @@ const { plan } = Astro.props;
       <Link
         href={plan.button.link || "#"}
         block
-        style={plan.popular ? "primary" : "outline"}>
+        style={plan.popular ? "primary" : "outline"}
+        class={plan.popular ? "from-orange-500 to-pink-500 hover:from-orange-400 hover:to-pink-400" : ""}>
         {plan.button.text || "Get Started"}
       </Link>
     </div>
-  </div>
 </div>
 
 
