@@ -6,60 +6,63 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal Site",
-    price: { monthly: "£100",
-      original: "£200",
-    discount: "50%"},
+    name: "Business Lite",
+    description: "For small businesses",
+    cost: { initial: "£100",
+      monthly: "£10",},
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Ideal for sole traders and small businesses",
+      "Website design and development",
+      "Content management",
+      "Responsive design",
+      "SEO basics",
+      "Social Media integration",
+      "Email support with guaranteed response within 48 hours",
     ],
     button: {
       text: "Contact us",
       link: "/contact",
     },
   },
-  {
-    name: "Business",
-    price: { monthly: "£300",
-      original: "£600",
-    discount: "50%"},
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
-  {
-    name: "Enterprise",
-    price: "from £500",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
+  // {
+  //   name: "Business Pro",
+  //   price: { monthly: "£300",
+  //     original: "£600",
+  //   discount: "50%"},
+  //   popular: true,
+  //   features: [
+  //     "Ideal for growing businesses that need more complex functionalities like e-commerce and booking systems",
+  //     "Advanced Website design",
+  //     "E-commerce and online payments",
+  //     "Booking systems",
+  //     "Analytics integration",
+  //     "Email marketing integration",
+  //     "Priority support with guaranteed response within 24 hours"
+  //   ],
+  //   button: {
+  //     text: "Contact us",
+  //     link: "/contact",
+  //   },
+  // },
+  // {
+  //   name: "Enterprise",
+  //   price: "from £500",
+  //   popular: false,
+  //   features: [
+  //     "Ideal for large businesses or those needing extensive web applications and a full digital toolkit",
+  //     "Custom Web Applications",
+  //     "Full Website and COntent Management",
+  //     "Full SEO and Digital Marketing Strategy",
+  //     "Digital Workspace Setup",
+  //     "Ongoing Maintenance and Support",
+  //     "Training and Workshops"
+  //   ],
+  //   button: {
+  //     text: "Contact us",
+  //     link: "/contact",
+  //   },
+  // },
 ];
 ---
 
