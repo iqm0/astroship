@@ -1,20 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content:["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      colors: {
-        primary: '#232424',
-        accent: '#272727',
+      keyframes: {
+        slidein: {
+          "from": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "to": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
-      fontFamily: {
-        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+      animation: {
+        slidein300: "slidein 1s ease 300ms forwards",
+        slidein500: "slidein 1s ease 500ms forwards",
+        slidein700: "slidein 1s ease 700ms forwards",
+        slidein900: "slidein 1s ease 900ms forwards",
+        slidein1200: "slidein 1s ease 1200ms forwards",
       },
-      boxShadow: {
-        'text-shadow': '0 1px 1px rgba(0, 0, 0, 0.25)',
-      }
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
 };
