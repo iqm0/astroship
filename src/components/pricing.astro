@@ -3,11 +3,11 @@ import Link from "@components/ui/link.astro";
 
 const { plan } = Astro.props;
 ---
-  <div class="animate-slidein300 opacity-0 max-w-md w-full mx-auto p-8 bg-white shadow-lg rounded-xl">
-    <div class="text-center">
+  <div class="max-w-md w-full mx-auto p-8 bg-white shadow-lg rounded-xl">
+    <div class="animate-slidein300 opacity-0 text-center">
       <h2 class="text-2xl font-extrabold text-gray-900 mb-6">Startup Plan</h2>
       <p class="text-gray-600 mb-6">
-        Tailored for startup companies to thrive online.
+        Tailored for small companies and service professionals to thrive online.
       </p>
       <div class="mb-6">
         <span class="text-4xl font-bold text-gray-900">£150</span>
@@ -31,10 +31,19 @@ const { plan } = Astro.props;
           </svg>
           Content management system
         </li>
+        <li class="mb-3 text-gray-700 flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          SEO and Analytics
+        </li>
         <!-- Add more features from the startup plan -->
       </ul>
-      <a href="/contact" class="inline-block w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700">
+      <Link
+        href="/contact"
+        class="inline-block w-full text-white font-bold py-3 px-6 rounded-lg bg-color-primary hover:bg-color-accent transition duration-300"
+      >
         Learn More
-      </a>
+      </Link>
     </div>
   </div>
