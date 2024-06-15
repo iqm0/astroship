@@ -5,62 +5,22 @@ import Sectionhead from "@components/sectionhead.astro";
 import PricingCard from "@components/pricing.astro";
 
 const pricing = [
-  {
-    name: "Business Lite",
-    description: "sole traders and small businesses",
-    cost: { initial: "£200",
-      monthly: "£20",},
+{
+    name: "Startup",
+    description: "for startup companies",
+    cost: { initial: "£150", monthly: "£15" },
     popular: false,
     features: [
-      "Website design and development",
-      "Content management",
-      "Responsive design",
-      "SEO basics",
-      "Social Media integration",
-      "Email support with guaranteed response within 48 hours",
+      "Basic Website design",
+      "Content management system",
+      "Mobile-friendly design",
+      "Basic SEO",
+      "Social Media setup",
+      "Email support with guaranteed response within 72 hours",
     ],
     button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
-  {
-    name: "Business Pro",
-    description: "medium-to-large businesses",
-    cost: { initial: "£600",
-      monthly: "£30",},
-    popular: true,
-    features: [
-      "Ideal for growing businesses that need more complex functionalities like e-commerce and booking systems",
-      "Advanced Website design",
-      "E-commerce and online payments",
-      "Booking systems",
-      "Analytics integration",
-      "Email marketing integration",
-      "Priority support with guaranteed response within 24 hours"
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
-  {
-    name: "Enterprise",
-    description: "corporate clients",
-    cost: { initial: "from £1000",
-      monthly: "Customised",},
-    popular: false,
-    features: [
-      "Custom Web Applications",
-      "Full Website and COntent Management",
-      "Full SEO and Digital Marketing Strategy",
-      "Digital Workspace Setup",
-      "Ongoing Maintenance and Support",
-      "Training and Workshops"
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
+      text: "Learn More",
+      formlink: "/contact",
     },
   },
 ];
@@ -75,8 +35,11 @@ const pricing = [
       </Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
+    <!-- Ensuring single column layout -->
+    <div class="grid grid-cols-1 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => (
+        <PricingCard plan={item} key={item.name} /> // Added a key for best practices
+      ))}
     </div>
   </Container>
 </Layout>

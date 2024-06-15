@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/hero.svg";
 import EmailInput from "./ui/forms/EmailInput.astro";
 import Link from "./ui/link.astro";
 
@@ -9,11 +9,11 @@ const sectionContent: string = "We will only send you one email per week with th
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  class="grid lg:grid-cols-2 place-items-center m-8 md:m-16pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Image
       src={heroImage}
-      alt="Two people sat on stools, talking in front of a desk with a laptop computer"
+      alt="Efficient business solutions on a laptop screen"
       width=400
       height=400
       loading="eager"
@@ -21,48 +21,36 @@ const sectionContent: string = "We will only send you one email per week with th
     />
   </div>
   <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter bg-gradient-to-r from-pink-500 to-orange-500 to-blue-500 dark:from-pink-400 dark:to-orange-400 dark:to-blue-400 bg-clip-text text-transparent"
-      style="mix-blend-mode: difference; text-shadow: 0 0 2px rgba(0, 0, 0, 0);"
-    >
-      Streamlined web services to boost your business - minus the hassle.
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-primary mb-16 text-boxShadow">
+      Elevate your online presence with tailored web solutions.
     </h1>
-    <p class="text-lg mt-4 text-slate-900 max-w-xl">
-      We are a web agency based in Kent, focused on small and medium businesses.
-      <wbr /> If you need a simple and effective website, or a custom solution built from scratch, we are here to help.
+    <p class="text-lg mt-4 mb-8 text-slate-900 max-w-xl">
+      Discover the power of bespoke websites and digital services designed specifically for small to medium businesses. Let's transform your ideas into impactful online experiences.
     </p>
 
     <div class="col-span-2">
-      <h3 class="font-bold text-orange-900 mt-5">
-        {sectionTitle}
-      </h3>
+      <h2 class="text-3xl font-bold text-accent mt-5" style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);">
+        Ready to grow your business?
+      </h2>
       <Link
-        href="/contact"
-        class="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-900 text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5 shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 animate-pulse"
-      >
-        Contact us
+      href="/contact"
+      class="bg-primary text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5 transition duration-300 ease-in-out"
+    >
+        Start a Project
         <svg
           class="w-6 h-6 ml-2"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
+          aria-hidden="true"
         >
           <path
-            fill-rule="evenodd"
+            fill-ule="evenodd"
             d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
             clip-rule="evenodd"
           />
         </svg>
       </Link>
-
-<!-- 
-      <form>
-        <EmailInput />
-        <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-          {sectionContent}
-        </p>
-      </form> -->
     </div>
-  </div>
   </div>
 </main>

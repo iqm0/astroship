@@ -37,7 +37,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="WebFairer - Modern web toolkit for small businessesq."
+      description="WebFairer - Build your professional online presence in southeast England and the south of the Midlands. We offer affordable web design and development services for small businesses and personal projects."
       canonical={canonicalURL}
       twitter={{
         creator: "@iqm0",
@@ -48,7 +48,7 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `WebFairer - Modern web toolkit for small businesses`,
+          title: 'WebFairer - Build your online presence in southeast England and the south of the Midlands',
           image: resolvedImageWithDomain,
         },
         image: {
@@ -56,6 +56,52 @@ const makeTitle = title
         },
       }}
     />
+    <!-- Handle structured data separately -->
+    <script type="application/ld+json">
+    {{
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "@id": canonicalURL,
+      name: "WebFairer",
+      description: "Web agency and toolkit for SMBs in southeast England and the south of the Midlands. We offer affordable web design and development services for small businesses and personal projects.",
+      url: canonicalURL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Nevill Street",
+        addressLocality: "Tunbridge Wells",
+        postalCode: "TN2 1HB",
+        addressRegion: "Kent",
+        addressCountry: "GB",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 51.141448,
+        longitude: 0.261593,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "09:00",
+        closes: "17:30",
+      },
+      sameAs: [
+        "https://www.facebook.com/webfairer",
+        "https://twitter.com/webfairer",
+        "https://www.linkedin.com/company/webfairer",
+        "https://github.com/webfairer",
+        "https://webfairer.com",
+        "https://webfairer.com/blog",
+        "https://webfairer.com/pricing",
+        "https://webfairer.com/contact",
+      ],
+    }}
+    </script>
   </head>
   <body>
     <Navbar />
