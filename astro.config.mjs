@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astroship.web3templates.com",
+  site: "https://webfairer.uk",
   integrations: [tailwind(), mdx(), sitemap()],
   devToolbar: {
     enabled: true
