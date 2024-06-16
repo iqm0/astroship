@@ -79,14 +79,16 @@ import Button from "./ui/button.astro";
 <script is:inline>
   const form = document.getElementById("form");
   const result = document.getElementById("result");
+  let isSending = false;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     form.classList.add("was-validated");
-    if (!form.checkValidity()) {
+    if (!form.checkValidity() || isSending) {
       form.querySelectorAll(":invalid")[0].focus();
       return;
     }
+    isSending = true;
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -116,11 +118,12 @@ import Button from "./ui/button.astro";
         console.log(error);
         result.innerHTML = "Something went wrong!";
       })
-      .then(function () {
+      .finally(() => {
         form.reset();
         form.classList.remove("was-validated");
         setTimeout(() => {
           result.style.display = "none";
+          isSending = false;
         }, 5000);
       });
   });
