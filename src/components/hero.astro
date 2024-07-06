@@ -9,52 +9,54 @@ const sectionContent: string = "We will only send you one email per week with th
 ---
 
 <main
-  class="grid h-screen-80 lg:grid-cols-2 place-items-center m-8 md:m-16pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="animate-slidein700 opacity-0 py-6 md:order-1 hidden md:block">
-    <Image
-      src={heroImage}
-      alt="Efficient business solutions on a laptop screen"
-      width=400
-      height=400
-      loading="eager"
-      format="avif"
-    />
+  class="grid h-screen-80 px-6 py-6 lg:grid-cols-2 place-items-center m-8 md:m-16pt-16 pb-8 md:pt-12 md:pb-24">
+  
+<div class="animate-slidein700 opacity-0 md:order-1 hidden md:block">
+  <Image
+  src={heroImage}
+  alt="Efficient business solutions on a laptop screen"
+  width=400
+  height=400
+  loading="eager"
+  format="avif"
+  />
+  
+</div>
+<div class="animate-slidein300 opacity-0 "  >
+  <h1 class="animate-slidein300 opacity-0 text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-primary mb-16 text-boxShadow">
+    Elevate your online presence with tailored web solutions.
+  </h1>
+  
+  <div class="animate-slidein300 opacity-0 ">
+    <p class="text-lg mt-4 mb-8 text-slate-900 max-w-xl">
+      Discover the power of bespoke websites and digital services designed specifically for small to medium businesses. Let's transform your ideas into impactful online experiences.
+    </p>
   </div>
-  <div class="animate-slidein300 opacity-0 "  >
-    <h1 class="animate-slidein300 opacity-0 text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-primary mb-16 text-boxShadow">
-      Elevate your online presence with tailored web solutions.
-    </h1>
-    
-    <div class="animate-slidein300 opacity-0 ">
-      <p class="text-lg mt-4 mb-8 text-slate-900 max-w-xl">
-        Discover the power of bespoke websites and digital services designed specifically for small to medium businesses. Let's transform your ideas into impactful online experiences.
-      </p>
-    </div>
   
   <div class="animate-slidein700 opacity-0  col-span-2">
     <h2 class="animate-slidein700 opacity-0 text-3xl font-bold text-accent mt-5" style="text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);">
       Ready to grow your business?
     </h2>
   </div>
-      <Link
-      href="/contact"
-      class="animate-slidein700 opacity-0 bg-primary text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5"
-    >
-        Start a Project
-        <svg
-          class="w-6 h-6 ml-2"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            fill-ule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </Link>
-    </div>
-  </div>
+  <Link
+  href="/contact"
+  class="animate-slidein700 opacity-0 bg-primary text-white font-bold py-3 px-6 rounded inline-flex items-center mt-5"
+  >
+  Start a Project
+  <svg
+  class="w-6 h-6 ml-2"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+  >
+  <path
+  fill-ule="evenodd"
+  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+  clip-rule="evenodd"
+  />
+</svg>
+</Link>
+</div>
+</div>
 </main>

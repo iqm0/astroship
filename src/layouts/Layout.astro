@@ -25,6 +25,19 @@ const makeTitle = title
 <!doctype html>
 <html lang="en">
   <head>
+    <SEO
+      title={makeTitle}
+      description="WebFairer - Modern web toolkit and website builder agency for small businesses and freelancers in southeast UK"
+
+      openGraph={{
+        basic: {
+          title: makeTitle,
+          type: "website",
+          url: canonicalURL,
+          image: resolvedImageWithDomain
+        },
+      }}
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -136,6 +149,7 @@ const makeTitle = title
       }
     </script>
   </head>
+
   <body>
     <Navbar />
     <slot />
